@@ -15,4 +15,12 @@ read.fasta("seq2.fasta", seqtype = "DNA")
 seq1 =paste(seq1, collapse = "")
 seq2=paste(seq2, collapse = "")
 # code for alignment
-pairwiseAlignment(pattern = seq1, subject = seq2)
+pairalign <- pairwiseAlignment(pattern = seq1, subject= seq2)
+#Overall Summary of the alignment, letting us know about number of mismatches and their positions. 
+summary(pairalign)
+# there may be need to store the alignment for later use in this case, we need to write it down
+# but before writing the alignment down in local directory, we need to convert the alignment into 
+# string by using a "BstringSet" function of Biostrings library. 
+align_string = BStringSet(c(toString(pattern(pairalign)), toString(subject(pairalign))))
+#to write the alignment "WriteXStringSet" function will be used
+writeXStringSet(align_string, "pair_wise_alignment.txt", format="FASTA")
