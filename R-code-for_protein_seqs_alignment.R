@@ -1,3 +1,5 @@
+# Dated 26th March 2019
+# University of Gujrat, Pakistan
 # This code is used for alignment of protein sequences in R. Two libraries are needed 
 library(seqinr)
 library(Biostrings)
