@@ -1,3 +1,4 @@
+# The following code is used for DNA Sequences only. 
 library(Biostrings)
 library (seqinr)
 #FASTA file having many sequences is read. The name of fasta file is "seq"
