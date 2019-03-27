@@ -2,6 +2,7 @@
 # Created at 27th March 2019
 # Wroking at home :) 
 # seqinr library is needed for this dotplot 
+# Code can also be used for DNA sequences 
 library(seqinr)
 # Protein fasta file is read, having many sequences in it.
 protein <- read.fasta("cox1multi.fasta", seqtype =  "AA")
